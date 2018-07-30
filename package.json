@@ -19,8 +19,8 @@
     "monaco-editor": "^0.8.3",
     "path": "^0.12.7",
     "prop-types": "^15.5.8",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "react": "16.4",
+    "react-dom": "16.4",
     "react-redux": "^5.0.3",
     "redux": "^3.6.0"
   },
