@@ -39,7 +39,7 @@ const menuTemplate = windowObj => [
         click: () => {
           global.newProj = false;
           const rootDir = dialog.showOpenDialog(windowObj, {
-            properties: ['openDirectory']
+            properties: ['openDirectory', 'openFile', 'multiSelections']
           });
           if (rootDir) {
             global.mainWindow.webContents.send('openDir', rootDir[0]);
@@ -75,6 +75,20 @@ const menuTemplate = windowObj => [
   {
     label: 'Selection',
     submenu: [{ role: 'selectall' }]
+  },
+  {
+    label: 'View',
+    submenu: [
+      {role: 'reload'},
+      {role: 'forcereload'},
+      {role: 'toggledevtools'},
+      {type: 'separator'},
+      {role: 'resetzoom'},
+      {role: 'zoomin'},
+      {role: 'zoomout'},
+      {type: 'separator'},
+      {role: 'togglefullscreen'}
+    ]
   },
   {
     role: 'window',
