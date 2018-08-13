@@ -1,6 +1,6 @@
-import React from 'react';
-import Directory from './Directory';
-import PropTypes from 'prop-types';
+import React from "react";
+import Directory from "./Directory";
+import PropTypes from "prop-types";
 
 const FileTree = ({
   fileTree,
@@ -15,6 +15,7 @@ const FileTree = ({
   renameFlag,
   renameHandler
 }) => {
+  console.log(fileTree);
   if (fileTree) {
     return (
       <div className="item-views">
@@ -23,7 +24,6 @@ const FileTree = ({
             <h5>File Directory</h5>
           </header>
           <main className="styleguide-sections">
-
             <div className="tree-view-resizer tool-panel">
               <div className="tree-view-scroller">
                 <ul className="tree-view full-menu list-tree has-collapsable-children">
@@ -57,9 +57,7 @@ const FileTree = ({
             <h5>File Directory</h5>
           </header>
           <main className="styleguide-sections">
-
             <div className="tree-view-resizer tool-panel" />
-
           </main>
         </div>
       </div>

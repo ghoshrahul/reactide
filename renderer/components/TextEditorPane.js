@@ -16,7 +16,7 @@ const TextEditorPane = ({ appState, addEditorInstance, setActiveTab, closeTab })
       />
     );
   });
-  
+
   return (
     <ride-pane>
       <TabContainer appState={appState} setActiveTab={setActiveTab} closeTab={closeTab} />
