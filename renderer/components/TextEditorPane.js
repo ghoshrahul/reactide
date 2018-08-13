@@ -1,21 +1,22 @@
-import React from 'react';
-import TextEditor from './TextEditor';
-import TabContainer from './TabContainer';
-import PropTypes from 'prop-types';
+import React from "react";
+import TextEditor from "./TextEditor";
+import TabContainer from "./TabContainer";
+import PropTypes from "prop-types";
 
 const TextEditorPane = ({ appState, addEditorInstance, setActiveTab, closeTab }) => {
-  const editorArr = [];
-  for (var i = 0; i < appState.openTabs.length; i++) {
-    editorArr.push(
+  const { openTabs } = appState;
+  const editorArr = openTabs.map(tab => {
+    return (
       <TextEditor
-        key={appState.openTabs[i].id}
-        id={appState.openTabs[i].id}
-        tab={appState.openTabs[i]}
-        activeTab={appState.activeTab}
+        key={tab.id}
+        id={tab.id}
+        tab={tab}
+        activeTab={tab.activeTab}
         addEditorInstance={addEditorInstance}
       />
     );
-  }
+  });
+  
   return (
     <ride-pane>
       <TabContainer appState={appState} setActiveTab={setActiveTab} closeTab={closeTab} />
