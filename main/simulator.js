@@ -9,7 +9,7 @@ const simulator = root => {
   const WIDTH = 800;
   const HEIGHT = 600;
   //Deserialize project info from projInfo file, contains path to index.html and presence of webpack among other things
-  const projInfo = JSON.parse(fs.readFileSync(path.join(__dirname, '../lib/projInfo.js')));
+  const projInfo = JSON.parse(fs.readFileSync(path.join(__dirname, '../lib/projInfo.json')));
 
   //Dynamic simulation
   if (projInfo.hotLoad) {
