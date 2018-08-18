@@ -1,9 +1,6 @@
-import React from "react";
+import React, { PureComponent } from "react";
 
-export default class TextEditor extends React.PureComponent {
-  constructor(props) {
-    super();
-  }
+export default class TextEditor extends PureComponent {
   componentDidMount() {
     let amdRequire = global.require("monaco-editor/min/vs/loader.js").require;
     var path = require("path");
